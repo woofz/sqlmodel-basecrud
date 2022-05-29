@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "sqlmodel-basecrud"
+version = "0.1.0"
+description = "Simple package that provides base CRUD operations for your models."
+authors = ["Danilo Aliberti <danilo.test@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+SQLAlchemy = "1.4.35"
+sqlmodel = "^0.0.6"
+fastapi = "^0.78.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
