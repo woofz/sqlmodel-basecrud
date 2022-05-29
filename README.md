@@ -2,7 +2,7 @@
 ###### *Simple package that provides base CRUD operations for your models.*
 
 ### What is SQLModel BaseCRUD?
-With SQLModel BaseCRUD, you can implement your CRUD operation easily in your project. It is simple as declaring a variable!
+With SQLModel BaseCRUD, you can implement your CRUD operations easily in your project. It is simple as declaring a variable!
 This package consists in two classes: *BaseCRUD* and *BaseRepository*. 
 **BaseCRUD** is the basic class that implements the basic CRUD operations, while **BaseRepository** is the repository used to execute those operations. You could also write your own repository class and use basic CRUD operation provided by **BaseRepository** class by extending it to your own repository class!
 
