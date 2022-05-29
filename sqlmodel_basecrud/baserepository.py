@@ -2,7 +2,7 @@ from typing import Type
 
 from sqlmodel import Session, SQLModel
 
-from basecrud import BaseCRUD
+from .basecrud import BaseCRUD
 
 
 class BaseRepository(BaseCRUD):
