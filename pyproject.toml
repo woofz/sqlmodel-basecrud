@@ -1,11 +1,23 @@
 [tool.poetry]
 name = "sqlmodel-basecrud"
-version = "0.1.0"
+version = "0.1.3"
 description = "Simple package that provides base CRUD operations for your models."
 authors = ["Danilo Aliberti <danilo.test@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/woofz/sqlmodel-basecrud"
+repository = "https://github.com/woofz/sqlmodel-basecrud"
+keywords = ["sqlmodel", "crud", "fastapi", "basecrud", "fastapi-crud", "fastapi-sqlmodel", "sqlmodel", "fastapi-sqlmodel-crud"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: FastAPI",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Database"
+]
+
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.7"
 SQLAlchemy = "1.4.35"
 sqlmodel = "^0.0.6"
 fastapi = "^0.78.0"

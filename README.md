@@ -40,7 +40,7 @@ We want to perform some operations on these models.  First of all we instantiate
 
 ```python
 # other imports..
-from sqlmodel-basecrud import BaseRepository
+from sqlmodel_basecrud import BaseRepository
 
 with Session(engine) as session:
 	hero_repository = BaseRepository(db=session, model=Hero)
@@ -96,13 +96,13 @@ If you want to extend the BaseRepository class with some custom methods, you can
 - **model**: must be a Type[SQLModel].
 
 ```python
-from sqlmodel-basecrud import BaseRepository
+from sqlmodel_basecrud import BaseRepository
 
 
 class MyCustomRepository(BaseRepository):
 
     def __init__(self, db: Session, model: Type[SQLModel]):
-        super().__init__(model, db)
+        super().__init__(model=model, db=db)
 ```
 ### What's  next
 The first thing that comes to my mind is to extend the features of Async to BaseCRUD class.  I will try to enhance the features of the project. Suggestions are appreciated 🤩
