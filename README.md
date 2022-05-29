@@ -17,7 +17,7 @@ This package consists in two classes: *BaseCRUD* and *BaseRepository*.
 
 ### Usage
 ##### Basic setup
-Consider these two model as example:
+Consider these two models as example:
 ```python
 class Team(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
