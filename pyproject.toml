@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqlmodel-basecrud"
-version = "0.1.3"
+version = "0.1.4"
 description = "Simple package that provides base CRUD operations for your models."
 authors = ["Danilo Aliberti <danilo.test@gmail.com>"]
 license = "MIT"
