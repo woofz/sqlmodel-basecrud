@@ -1,4 +1,6 @@
 # SQLModel BaseCRUD
+[![codecov](https://codecov.io/gh/woofz/sqlmodel-basecrud/branch/main/graph/badge.svg?token=AZW7YBAJBP)](https://codecov.io/gh/woofz/sqlmodel-basecrud)
+
 ###### *Simple package that provides base CRUD operations for your models.*
 
 ### What is SQLModel BaseCRUD?
