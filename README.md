@@ -6,7 +6,7 @@ _Simple package that provides base CRUD operations for your models._
 
 ---
 
-_**Documentation:**_ [https://woofz.github.io/sqlmodel-basecrud/](https://woofz.github.io/sqlmodel-basecrud/)
+_**Documentation:**_ [https://woofz.github.io/sqlmodel-basecrud/](https://woofz.github.io/sqlmodel-basecrud/latest)
 
 _**Sources:**_ [https://github.com/woofz/sqlmodel-basecrud](https://github.com/woofz/sqlmodel-basecrud)
 
