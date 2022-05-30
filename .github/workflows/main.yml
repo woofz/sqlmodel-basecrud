@@ -16,7 +16,7 @@ jobs:
       with:
         python-version: 3.7
     - name: Install Poetry
-      uses: snok/install-poetry@v1
+      run: pip install poetry
     - name: Install dependencies
       run: poetry install
     - name: Generate coverage report
