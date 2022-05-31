@@ -1,6 +1,6 @@
 ## SQLModel BaseCRUD
 
-[![codecov](https://codecov.io/gh/woofz/sqlmodel-basecrud/branch/main/graph/badge.svg?token=AZW7YBAJBP)](https://codecov.io/gh/woofz/sqlmodel-basecrud) [![PyPI version](https://badge.fury.io/py/sqlmodel-basecrud.svg)](https://badge.fury.io/py/sqlmodel-basecrud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sqlmodel-basecrud)
+[![codecov](https://codecov.io/gh/woofz/sqlmodel-basecrud/branch/main/graph/badge.svg?token=AZW7YBAJBP)](https://codecov.io/gh/woofz/sqlmodel-basecrud) [![PyPI version](https://badge.fury.io/py/sqlmodel-basecrud.svg)](https://badge.fury.io/py/sqlmodel-basecrud) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sqlmodel-basecrud) [![Downloads](https://static.pepy.tech/personalized-badge/sqlmodel-basecrud?period=total&units=none&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/sqlmodel-basecrud)
 
 _Simple package that provides base CRUD operations for your models._
 
