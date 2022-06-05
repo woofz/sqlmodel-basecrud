@@ -1,4 +1,4 @@
-from typing import TypeVar, Type, Optional, List, Any
+from typing import TypeVar, Type, Optional, List, Any, Generic
 
 from sqlalchemy.sql.elements import BinaryExpression
 from sqlmodel import Session, SQLModel, select
@@ -12,7 +12,7 @@ Select.inherit_cache = True  # type: ignore
 ModelClass = TypeVar('ModelClass', bound=SQLModel)
 
 
-class BaseCRUD:
+class BaseCRUD(Generic[ModelClass]):
     """Simple class providing base CRUD operations on given Model"""
     db: Session
     model: Type[ModelClass]
@@ -85,27 +85,40 @@ class BaseCRUD:
         statement = select(self.model)
         return self.db.exec(statement).all()
 
-    def update(self, instance: SQLModel) -> ModelClass:
+    def update(self, instance: SQLModel) -> Optional[SQLModel]:
         """
         Updates a record into database. It is equal to create data process, so it will call that method
         Args:
             instance: the instance to update
 
         Returns:
-            ModelClass: the updated instance
+            Optional[SQLModel]: the updated instance
         """
         updated_instance = self.create(instance)
         return updated_instance
 
-    def delete(self, instance: Type[ModelClass]) -> ModelClass:
+    def delete(self, instance: Type[ModelClass]) -> Type[ModelClass]:
         """
         Removes an instance from the database
         Args:
             instance: the instance to remove
 
         Returns:
-            ModelClass: the instance removed
+            Type[ModelClass]: the instance removed
         """
         self.db.delete(instance)
         self.db.commit()
         return instance
+
+    def bulk_create(self, instances: List[ModelClass]) -> List[ModelClass]:
+        """
+        Insert multiple instances in the database
+        Args:
+            instances: List of instances to be added into the Database
+
+        Returns:
+            List[ModelClass]: the inserted instances
+        """
+        self.db.bulk_save_objects(instances)
+        self.db.commit()
+        return instances

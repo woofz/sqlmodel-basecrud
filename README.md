@@ -78,25 +78,36 @@ hero_repository.create(my_hero)
 # now my_hero is persisting in the database!
 ```
 
+##### BULK CREATE operation
+Persists multiple items into the database. You have to pass them in a list.
+```python
+# BULK CREATE operation
+my_heros_list = [ Hero(name='Github Hero', secret_name='Gitty', age=31),
+                 Hero(name='Hero 2', secret_name='Hero2', age=21),
+                 Hero(name='Hero 3', secret_name='Hero3', age=29)
+               ]
+hero_repository.bulk_create(my_heros_list)
+```
 ##### GET operation
-
 GET operation simply gets a single record from the database.
-
 ```python
 result = hero_repository.get(id=1, name='Github Hero')
 ```
-
-_result_ variable will be an instance of Hero, if a result matches the criteria, or None type.
-
+Note that you can also use a BinaryExpression. Here's an example: 
+```python
+result = hero_repository.get(Hero.id >= 3)
+```
+*result* variable will be an instance of Hero, if a result matches the criteria, or None type.
 ##### FILTER operation
-
 Gets one or more instances from the database, filtering them by one or more column/s.
-
 ```python
 results = hero_repository.filter(age=31)
 ```
-
-_results_ will be a _List_ with zero or more elements.
+Like the GET operation, here you can use a BinaryExpression as well. Here's an example:  
+```python
+result = hero_repository.filter(Hero.age == 31)
+```
+*results*  will be a *List* with zero or more elements.
 
 ##### GET ALL operation
 
@@ -120,7 +131,7 @@ instance_to_update.age = 27
 hero_repository.update(instance_to_update)
 ```
 
-The hero will have his columns \*name \*and _age_ with updated values.
+The hero will have his columns *name* and *age* with updated values.
 
 ##### DELETE operation
 

@@ -123,3 +123,15 @@ class TestBaseCRUD:
         team_repository.update(team_to_update)
         team_read_again = team_repository.get(id=1)
         assert team_read_again.name != old_param
+
+    def test_bulk_create(self, populate_db):
+        session = populate_db
+        team_repository = BaseRepository(db=session, model=Team)
+        assert team_repository.get(name='w00fz Team') is None
+        teams_list = [Team(name='w00fz2 Team', headquarters='Amsterdam'),
+                      Team(name='Github Team', headquarters='Breda'),
+                      Team(name='Gitlab Team', headquarters='Eindhoven')
+                      ]
+        team_repository.bulk_create(teams_list)
+        print(team_repository.get_all())
+        assert len(team_repository.get_all()) == 6

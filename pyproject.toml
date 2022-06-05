@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqlmodel-basecrud"
-version = "0.1.8"
+version = "0.1.9"
 description = "Simple package that provides base CRUD operations for your models."
 documentation = "https://woofz.github.io/sqlmodel-basecrud/latest"
 authors = ["Danilo Aliberti <danilo@woofz.dev>"]
