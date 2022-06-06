@@ -82,11 +82,11 @@ hero_repository.create(my_hero)
 Persists multiple items into the database. You have to pass them in a list.
 ```python
 # BULK CREATE operation
-my_heros_list = [ Hero(name='Github Hero', secret_name='Gitty', age=31),
+my_heroes_list = [ Hero(name='Github Hero', secret_name='Gitty', age=31),
                  Hero(name='Hero 2', secret_name='Hero2', age=21),
                  Hero(name='Hero 3', secret_name='Hero3', age=29)
                ]
-hero_repository.bulk_create(my_heros_list)
+hero_repository.bulk_create(my_heroes_list)
 ```
 ##### GET operation
 GET operation simply gets a single record from the database.
